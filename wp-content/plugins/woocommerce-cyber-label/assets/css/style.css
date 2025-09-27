@@ -1,0 +1,33 @@
+.wc-cyber-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35em 0.75em;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(0, 119, 182, 0.25);
+    margin-bottom: 0.75rem;
+}
+
+.woocommerce ul.products li.product .wc-cyber-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 5;
+}
+
+.single-product .wc-cyber-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.single-product .summary .wc-cyber-label::before,
+.woocommerce ul.products li.product .wc-cyber-label::before {
+    content: '\f2dc';
+    font-family: 'dashicons';
+    font-size: 1em;
+}
