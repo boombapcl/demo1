@@ -1,0 +1,14 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Línea Alpina Casas Fabelsa</title>
+  <desc id="desc">Ilustración tipo A-frame para la línea Alpina.</desc>
+  <rect width="900" height="1100" rx="44" fill="#F5E7D8"/>
+  <circle cx="715" cy="185" r="118" fill="#EAA86F" opacity=".72"/>
+  <path d="M450 132L795 872H105L450 132Z" fill="#2A1B14"/>
+  <path d="M450 238L678 806H222L450 238Z" fill="#D98949"/>
+  <path d="M450 308L625 806H275L450 308Z" fill="#FFF1E0"/>
+  <path d="M450 238V806" stroke="#2F5D3A" stroke-width="18"/>
+  <path d="M334 612H566" stroke="#2F5D3A" stroke-width="18"/>
+  <path d="M134 874H766" stroke="#2F5D3A" stroke-width="42" stroke-linecap="round"/>
+  <text x="64" y="1000" fill="#2F5D3A" font-size="64" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Línea Alpina</text>
+  <text x="66" y="1045" fill="#70422A" font-size="28" font-family="Arial, sans-serif">Casa tipo A · vigas a la vista · balcón/terraza</text>
+</svg>

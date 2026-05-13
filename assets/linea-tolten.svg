@@ -1,0 +1,14 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Línea Toltén Casas Fabelsa</title>
+  <desc id="desc">Ilustración de casa luminosa con bow window para la línea Toltén.</desc>
+  <rect width="900" height="1100" rx="44" fill="#F9EFE5"/>
+  <path d="M86 515H778V855H86V515Z" fill="#B87542"/>
+  <path d="M199 340H675L832 515H53L199 340Z" fill="#2F5D3A"/>
+  <path d="M263 574H432V855H263V574Z" fill="#FFF4E8"/>
+  <path d="M488 575C592 534 713 596 712 702C711 811 592 873 488 831V575Z" fill="#FFF4E8"/>
+  <path d="M568 553V852M488 702H713" stroke="#D97932" stroke-width="12"/>
+  <path d="M112 899H790" stroke="#2F5D3A" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="112" cy="210" r="96" fill="#F5C18F" opacity=".7"/>
+  <text x="64" y="1000" fill="#2F5D3A" font-size="64" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Línea Toltén</text>
+  <text x="66" y="1045" fill="#70422A" font-size="28" font-family="Arial, sans-serif">Vista amplia · bow window · desde 42 m²</text>
+</svg>
