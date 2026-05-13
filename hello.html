@@ -1,1 +1,535 @@
-hello world
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casas Fabelsa | One page 2026</title>
+  <meta name="description" content="Prototipo one page Casas Fabelsa 2026 con líneas Alpina, Toltén, ECO y proyectos personalizados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --fabelsa-green: #2f5d3a;
+      --fabelsa-green-dark: #17351f;
+      --fabelsa-orange: #d97932;
+      --fabelsa-orange-soft: #f2b77f;
+      --wood: #70422a;
+      --cream: #fff8ef;
+      --cream-2: #f5e7d8;
+      --sage: #e7efe1;
+      --ink: #241914;
+      --muted: #73645b;
+      --white: #ffffff;
+      --shadow: 0 26px 70px rgba(36, 25, 20, 0.16);
+      --radius-xl: 36px;
+      --radius-lg: 24px;
+      --container: min(1180px, calc(100% - 42px));
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Manrope", Arial, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .container { margin: 0 auto; width: var(--container); }
+    .section { padding: 105px 0; }
+    .section-soft { background: var(--cream-2); }
+    .section-sage { background: var(--sage); }
+
+    h1, h2, h3 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-weight: 400;
+      line-height: .95;
+      letter-spacing: -.045em;
+    }
+    h1 { font-size: clamp(3.8rem, 8.5vw, 8.8rem); text-transform: uppercase; }
+    h2 { font-size: clamp(2.7rem, 5.8vw, 6rem); }
+    h3 { font-size: clamp(1.65rem, 2.8vw, 2.55rem); }
+    p { color: var(--muted); }
+
+    .eyebrow {
+      align-items: center;
+      border: 1px solid rgba(47, 93, 58, .22);
+      border-radius: 999px;
+      color: var(--fabelsa-green);
+      display: inline-flex;
+      font-size: .78rem;
+      font-weight: 800;
+      gap: 8px;
+      letter-spacing: .05em;
+      padding: 8px 13px;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      background: var(--fabelsa-orange);
+      border-radius: 50%;
+      content: "";
+      height: 8px;
+      width: 8px;
+    }
+
+    .btn {
+      align-items: center;
+      border-radius: 999px;
+      display: inline-flex;
+      font-weight: 900;
+      gap: 11px;
+      justify-content: center;
+      padding: 14px 20px 14px 24px;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--fabelsa-green); box-shadow: 0 18px 34px rgba(47, 93, 58, .24); color: var(--white); }
+    .btn-secondary { background: var(--fabelsa-orange); color: var(--white); }
+    .btn-light { background: var(--white); color: var(--fabelsa-green-dark); }
+    .btn-ghost { border: 1px solid rgba(47, 93, 58, .24); color: var(--fabelsa-green-dark); }
+    .arrow {
+      background: rgba(255,255,255,.28);
+      border-radius: 50%;
+      display: grid;
+      height: 28px;
+      place-items: center;
+      width: 28px;
+    }
+
+    .site-header {
+      left: 0;
+      padding: 20px 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 50;
+    }
+    .nav {
+      align-items: center;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 248, 239, .9);
+      border: 1px solid rgba(47, 93, 58, .13);
+      border-radius: 999px;
+      box-shadow: 0 16px 42px rgba(36, 25, 20, .08);
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+      padding: 10px 12px 10px 18px;
+    }
+    .brand { align-items: center; display: flex; gap: 12px; font-weight: 900; }
+    .brand img { height: 50px; width: 154px; object-fit: contain; }
+    .nav-links { align-items: center; display: flex; gap: 18px; font-size: .88rem; font-weight: 900; }
+    .nav-links a { color: rgba(36, 25, 20, .76); }
+
+    .hero {
+      background:
+        radial-gradient(circle at 22% 30%, rgba(217, 121, 50, .22), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(47, 93, 58, .18), transparent 24%),
+        linear-gradient(180deg, #fff8ef 0%, #f7e6d6 100%);
+      min-height: 100vh;
+      overflow: hidden;
+      padding: 130px 0 72px;
+      position: relative;
+    }
+    .hero-grid { align-items: center; display: grid; gap: 46px; grid-template-columns: .92fr 1.08fr; }
+    .hero-copy p { font-size: clamp(1.02rem, 1.5vw, 1.25rem); margin: 24px 0 30px; max-width: 640px; }
+    .hero-actions, .actions { display: flex; flex-wrap: wrap; gap: 13px; }
+    .hero-media { position: relative; }
+    .hero-media > img {
+      border: 12px solid rgba(255,255,255,.52);
+      border-radius: 42px;
+      box-shadow: var(--shadow);
+      width: 100%;
+    }
+    .hero-card {
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(47, 93, 58, .13);
+      border-radius: 26px;
+      bottom: 24px;
+      box-shadow: var(--shadow);
+      left: -28px;
+      max-width: 320px;
+      padding: 20px;
+      position: absolute;
+    }
+    .hero-card strong { color: var(--fabelsa-green); display: block; font-size: 2.2rem; line-height: 1; }
+    .hero-card span { color: var(--muted); display: block; font-size: .9rem; margin-top: 8px; }
+
+    .proof-strip {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 34px;
+    }
+    .proof {
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(47, 93, 58, .12);
+      border-radius: 22px;
+      padding: 20px;
+    }
+    .proof strong { color: var(--fabelsa-green); display: block; font-family: "DM Serif Display", Georgia, serif; font-size: 2.25rem; font-weight: 400; line-height: 1; }
+    .proof span { color: var(--muted); display: block; font-size: .84rem; margin-top: 8px; }
+
+    .section-head {
+      align-items: end;
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 1fr .78fr;
+      margin-bottom: 48px;
+    }
+    .section-head p { font-size: 1rem; max-width: 620px; }
+
+    .intro-grid { align-items: center; display: grid; gap: 44px; grid-template-columns: .7fr 1fr; }
+    .brand-panel {
+      background: var(--white);
+      border: 1px solid rgba(47, 93, 58, .12);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .brand-panel img { margin: 0 auto 26px; }
+    .palette { display: grid; gap: 10px; grid-template-columns: repeat(4, 1fr); }
+    .swatch { border-radius: 18px; min-height: 92px; padding: 12px; color: #fff; font-size: .78rem; font-weight: 900; display: flex; align-items: end; }
+    .swatch.green { background: var(--fabelsa-green); }
+    .swatch.orange { background: var(--fabelsa-orange); }
+    .swatch.wood { background: var(--wood); }
+    .swatch.cream { background: var(--cream-2); color: var(--wood); }
+    .intro-copy p { font-size: 1.05rem; margin: 22px 0 26px; max-width: 780px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag { background: rgba(47, 93, 58, .08); border: 1px solid rgba(47, 93, 58, .14); border-radius: 999px; color: var(--fabelsa-green-dark); font-weight: 900; padding: 9px 13px; }
+
+    .featured-grid { display: grid; gap: 24px; grid-template-columns: 1.15fr .85fr; }
+    .feature-card {
+      background: var(--white);
+      border: 1px solid rgba(47, 93, 58, .12);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .feature-card img { height: 430px; object-fit: cover; width: 100%; }
+    .feature-content { padding: 30px; }
+    .feature-content p { margin: 15px 0 22px; }
+    .side-list { display: grid; gap: 14px; }
+    .mini-card { background: rgba(255,255,255,.72); border: 1px solid rgba(47, 93, 58, .12); border-radius: 22px; padding: 22px; }
+    .mini-card h3 { color: var(--fabelsa-green); font-size: 2rem; }
+    .mini-card p { font-size: .94rem; margin-top: 10px; }
+
+    .lines-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, 1fr); }
+    .line-card {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(47, 93, 58, .12);
+      border-radius: var(--radius-xl);
+      box-shadow: 0 18px 50px rgba(36, 25, 20, .08);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .line-card:hover { box-shadow: var(--shadow); transform: translateY(-6px); }
+    .line-card img { aspect-ratio: 1 / 1.12; object-fit: cover; width: 100%; }
+    .line-card-content { padding: 26px; }
+    .line-card h3 { color: var(--fabelsa-green-dark); }
+    .line-card p { margin: 12px 0 20px; }
+    .meta { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .meta span { background: rgba(217, 121, 50, .12); border-radius: 999px; color: var(--wood); font-size: .78rem; font-weight: 900; padding: 7px 10px; }
+
+    .gallery-grid { display: grid; gap: 18px; grid-template-columns: 1.1fr .8fr .8fr; }
+    .gallery-item { border-radius: 28px; box-shadow: 0 18px 48px rgba(36, 25, 20, .12); min-height: 410px; overflow: hidden; position: relative; }
+    .gallery-item img { height: 100%; object-fit: cover; width: 100%; }
+    .gallery-item:first-child { min-height: 510px; }
+    .gallery-caption {
+      background: linear-gradient(180deg, transparent, rgba(23, 53, 31, .88));
+      bottom: 0;
+      color: #fff;
+      left: 0;
+      padding: 70px 24px 24px;
+      position: absolute;
+      right: 0;
+    }
+    .gallery-caption p { color: rgba(255,255,255,.78); }
+
+    .process-grid { display: grid; gap: 16px; grid-template-columns: repeat(5, 1fr); }
+    .step { background: rgba(255,255,255,.7); border: 1px solid rgba(47, 93, 58, .12); border-radius: 24px; padding: 22px; }
+    .step strong { color: var(--fabelsa-orange); display: block; font-family: "DM Serif Display", Georgia, serif; font-size: 2.45rem; font-weight: 400; line-height: 1; }
+    .step h3 { font-family: "Manrope", Arial, sans-serif; font-size: 1rem; font-weight: 900; letter-spacing: -.02em; line-height: 1.15; margin: 16px 0 9px; }
+    .step p { font-size: .86rem; }
+
+    .spec-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+    .spec { background: var(--white); border: 1px solid rgba(47, 93, 58, .12); border-radius: 24px; padding: 26px; }
+    .spec .icon { align-items: center; background: rgba(217, 121, 50, .14); border-radius: 18px; color: var(--fabelsa-orange); display: flex; font-size: 1.8rem; height: 58px; justify-content: center; margin-bottom: 18px; width: 58px; }
+    .spec h3 { color: var(--fabelsa-green); font-size: 2rem; }
+    .spec p { margin-top: 10px; }
+
+    details { background: rgba(255,255,255,.7); border: 1px solid rgba(47, 93, 58, .12); border-radius: 18px; padding: 20px 22px; }
+    details + details { margin-top: 12px; }
+    summary { color: var(--fabelsa-green-dark); cursor: pointer; font-weight: 900; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin-top: 10px; max-width: 840px; }
+
+    .cta {
+      background:
+        radial-gradient(circle at 14% 15%, rgba(217, 121, 50, .26), transparent 24%),
+        radial-gradient(circle at 90% 80%, rgba(242, 183, 127, .2), transparent 24%),
+        var(--fabelsa-green-dark);
+      color: var(--white);
+      padding: 104px 0;
+    }
+    .cta h2 { color: var(--cream); font-size: clamp(3.5rem, 8vw, 8rem); max-width: 1050px; text-transform: uppercase; }
+    .cta p { color: rgba(255,255,255,.75); font-size: 1.08rem; margin: 24px 0 30px; max-width: 700px; }
+
+    .site-footer { padding: 42px 0 30px; }
+    .footer-grid { align-items: start; display: grid; gap: 30px; grid-template-columns: 1fr 1fr 1fr; }
+    .footer-grid img { height: 68px; width: 210px; object-fit: contain; }
+    .footer-grid a, .footer-grid p { color: var(--muted); display: block; margin-top: 8px; }
+    .footer-grid strong { color: var(--fabelsa-green-dark); }
+    .copyright { border-top: 1px solid rgba(47, 93, 58, .14); color: var(--muted); font-size: .84rem; margin-top: 34px; padding-top: 22px; }
+
+    .whatsapp-float { align-items: center; background: #25d366; border-radius: 999px; bottom: 20px; box-shadow: 0 16px 34px rgba(37, 211, 102, .35); color: #062910; display: flex; font-weight: 900; gap: 9px; padding: 14px 18px; position: fixed; right: 20px; z-index: 60; }
+
+    @media (max-width: 980px) {
+      .nav-links { display: none; }
+      .hero-grid, .section-head, .intro-grid, .featured-grid, .footer-grid { grid-template-columns: 1fr; }
+      .proof-strip, .lines-grid, .gallery-grid, .process-grid, .spec-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-card { left: 18px; }
+    }
+    @media (max-width: 640px) {
+      :root { --container: min(100% - 28px, 1180px); }
+      .site-header { padding: 12px 0; }
+      .brand img { height: 42px; width: 132px; }
+      .nav .btn { display: none; }
+      .hero { padding-top: 104px; }
+      h1 { font-size: clamp(3rem, 17vw, 5rem); }
+      .section { padding: 76px 0; }
+      .proof-strip, .lines-grid, .gallery-grid, .process-grid, .spec-grid, .palette { grid-template-columns: 1fr; }
+      .hero-card { bottom: 12px; max-width: calc(100% - 36px); }
+      .feature-card img { height: 320px; }
+      .gallery-item, .gallery-item:first-child { min-height: 360px; }
+      .whatsapp-float { bottom: 14px; left: 14px; justify-content: center; right: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Casas Fabelsa inicio">
+        <img src="assets/casas-fabelsa-logo.svg" alt="Casas Fabelsa" />
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#proyectos">Personalizados</a>
+        <a href="#lineas">Líneas</a>
+        <a href="#alpina">Alpina</a>
+        <a href="#tolten">Toltén</a>
+        <a href="#eco">ECO</a>
+        <a href="#cotizar">Cotizar</a>
+      </nav>
+      <a class="btn btn-primary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener">WhatsApp <span class="arrow">→</span></a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Casas Fabelsa · Catálogos 2026</span>
+          <h1>Casas de madera con diseño propio</h1>
+          <p>Landing renovada para mostrar lo que Casas Fabelsa ofrece hoy: proyectos personalizados, casas alpinas y líneas Toltén/ECO con una estética más cálida, corporativa y comercial.</p>
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20quiero%20cotizar%20mi%20proyecto%20personalizado." target="_blank" rel="noopener">Cotizar por WhatsApp <span class="arrow">→</span></a>
+            <a class="btn btn-ghost" href="#lineas">Ver líneas</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/proyecto-personalizado.svg" alt="Proyecto personalizado de Casas Fabelsa" />
+          <div class="hero-card"><strong>100%</strong><span>Las imágenes finales deben reemplazarse por fotografías propias desde Drive 2026.</span></div>
+        </div>
+      </div>
+      <div class="container proof-strip" aria-label="Diferenciales Casas Fabelsa">
+        <div class="proof"><strong>+12</strong><span>años de trayectoria</span></div>
+        <div class="proof"><strong>3</strong><span>líneas visibles: Alpina, Toltén y ECO</span></div>
+        <div class="proof"><strong>2026</strong><span>catálogos e imágenes actuales</span></div>
+        <div class="proof"><strong>WA</strong><span>canal principal de proyectos</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="marca-title">
+      <div class="container intro-grid">
+        <div class="brand-panel">
+          <img src="assets/casas-fabelsa-logo.svg" alt="Logo Casas Fabelsa" />
+          <div class="palette" aria-label="Paleta corporativa aplicada">
+            <div class="swatch green">Verde marca</div>
+            <div class="swatch orange">Naranjo marca</div>
+            <div class="swatch wood">Madera</div>
+            <div class="swatch cream">Crema cálido</div>
+          </div>
+        </div>
+        <div class="intro-copy">
+          <span class="eyebrow">Identidad aplicada</span>
+          <h2 id="marca-title">Ahora la propuesta sí se siente Casas Fabelsa.</h2>
+          <p>Este prototipo incorpora una propuesta visual basada en la marca: verde, naranjo, tonos madera y crema. También integra la estructura real del sitio actual, manteniendo Línea Alpina, Línea Toltén, Línea ECO, características y cotización en formato one page.</p>
+          <div class="tag-list">
+            <span class="tag">Proyectos personalizados</span>
+            <span class="tag">Casas Alpinas</span>
+            <span class="tag">Línea Toltén</span>
+            <span class="tag">Línea ECO</span>
+            <span class="tag">Fotografías propias</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container featured-grid">
+        <article class="feature-card">
+          <img src="assets/proyecto-personalizado.svg" alt="Imagen referencial de proyecto personalizado Casas Fabelsa" />
+          <div class="feature-content">
+            <span class="eyebrow">Servicio principal</span>
+            <h2 id="proyectos-title">Proyectos personalizados</h2>
+            <p>El foco principal de la landing pasa a ser el diseño y construcción de proyectos a medida. El cliente puede iniciar desde una idea, referencia, modelo base o necesidad específica para su terreno.</p>
+            <a class="btn btn-primary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20quiero%20cotizar%20un%20proyecto%20personalizado." target="_blank" rel="noopener">Cotizar proyecto <span class="arrow">→</span></a>
+          </div>
+        </article>
+        <div class="side-list">
+          <div class="mini-card"><h3>Fotos reales</h3><p>Se elimina la dependencia de imágenes de internet y se prioriza material propio del Drive 2026.</p></div>
+          <div class="mini-card"><h3>Más diseño</h3><p>El mensaje sube de “kit/prefabricado” hacia construcción en madera, estilo y personalización.</p></div>
+          <div class="mini-card"><h3>WhatsApp</h3><p>Todos los llamados principales dirigen al número de proyectos: +56 9 5184 7376.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lineas" aria-labelledby="lineas-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Líneas Casas Fabelsa</span>
+            <h2 id="lineas-title">Alpina, Toltén y ECO dentro de la misma landing.</h2>
+          </div>
+          <p>No se agregan páginas internas. Cada línea queda como bloque comercial dentro del one page, con CTA directo para cotizar por WhatsApp o pedir catálogo.</p>
+        </div>
+        <div class="lines-grid">
+          <article class="line-card" id="alpina">
+            <img src="assets/linea-alpina.svg" alt="Línea Alpina Casas Fabelsa" />
+            <div class="line-card-content">
+              <div class="meta"><span>Tipo A</span><span>Vigas a la vista</span><span>Terraza/Balcón</span></div>
+              <h3>Línea Alpina</h3>
+              <p>Casa juvenil y distintiva tipo A, con segundo piso y una presencia arquitectónica ideal para parcelas, descanso o proyectos turísticos.</p>
+              <a class="btn btn-primary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20me%20interesa%20la%20L%C3%ADnea%20Alpina." target="_blank" rel="noopener">Cotizar Alpina</a>
+            </div>
+          </article>
+          <article class="line-card" id="tolten">
+            <img src="assets/linea-tolten.svg" alt="Línea Toltén Casas Fabelsa" />
+            <div class="line-card-content">
+              <div class="meta"><span>Desde 42 m²</span><span>Bow window</span><span>Luminosa</span></div>
+              <h3>Línea Toltén</h3>
+              <p>Modelo con inspiración de playa o verano, excelente para vivir, con vista amplia y ventana bow window para conectar mejor con el entorno.</p>
+              <a class="btn btn-primary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20me%20interesa%20la%20L%C3%ADnea%20Tolt%C3%A9n." target="_blank" rel="noopener">Cotizar Toltén</a>
+            </div>
+          </article>
+          <article class="line-card" id="eco">
+            <img src="assets/linea-eco.svg" alt="Línea ECO Casas Fabelsa" />
+            <div class="line-card-content">
+              <div class="meta"><span>Eficiente</span><span>Campestre</span><span>Accesible</span></div>
+              <h3>Línea ECO</h3>
+              <p>Alternativa pensada para optimizar inversión: una casa acogedora, simple y campestre, manteniendo calidad en materiales.</p>
+              <a class="btn btn-primary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20me%20interesa%20la%20L%C3%ADnea%20ECO." target="_blank" rel="noopener">Cotizar ECO</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sage" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Galería propia 2026</span>
+            <h2 id="galeria-title">Aquí van las fotos reales de Drive.</h2>
+          </div>
+          <p>Para esta revisión dejé imágenes vectoriales de Casas Fabelsa, no placeholders abstractos. Al pasar a Elementor, estas tarjetas se reemplazan por fotos reales seleccionadas del catálogo 2026.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-item"><img src="assets/proyecto-personalizado.svg" alt="Proyecto personalizado" /><div class="gallery-caption"><h3>Proyectos personalizados</h3><p>Imagen propia destacada del nuevo enfoque comercial.</p></div></article>
+          <article class="gallery-item"><img src="assets/linea-alpina.svg" alt="Casa Alpina" /><div class="gallery-caption"><h3>Casas Alpinas</h3><p>Mayor protagonismo visual y comercial.</p></div></article>
+          <article class="gallery-item"><img src="assets/linea-tolten.svg" alt="Línea Toltén" /><div class="gallery-caption"><h3>Toltén / ECO</h3><p>Modelos vigentes dentro de la landing.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="caracteristicas-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Características</span>
+            <h2 id="caracteristicas-title">Información técnica sin perder diseño.</h2>
+          </div>
+          <p>Se mantiene la información importante del sitio actual, pero presentada con tarjetas simples y más premium.</p>
+        </div>
+        <div class="spec-grid">
+          <div class="spec"><div class="icon">⌂</div><h3>Estructura</h3><p>Estructura en pino impregnado, piso de madera y puertas interiores/exteriores según línea y alcance definido.</p></div>
+          <div class="spec"><div class="icon">◈</div><h3>Aislantes</h3><p>Membrana hidrófuga y componentes técnicos que deben validarse con las especificaciones del catálogo 2026.</p></div>
+          <div class="spec"><div class="icon">→</div><h3>Despacho</h3><p>Condiciones de entrega y cobertura deben actualizarse con la información comercial vigente antes de publicar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="proceso-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Proceso</span>
+            <h2 id="proceso-title">De la idea a la cotización.</h2>
+          </div>
+          <p>Flujo pensado para que el usuario entienda qué enviar por WhatsApp y llegue a ventas con una consulta más ordenada.</p>
+        </div>
+        <div class="process-grid">
+          <div class="step"><strong>1</strong><h3>Idea o línea</h3><p>Elige personalizado, Alpina, Toltén o ECO.</p></div>
+          <div class="step"><strong>2</strong><h3>Terreno</h3><p>Indica comuna, medidas y etapa del proyecto.</p></div>
+          <div class="step"><strong>3</strong><h3>Referencia</h3><p>Envía fotos, catálogo o modelo de interés.</p></div>
+          <div class="step"><strong>4</strong><h3>Asesoría</h3><p>El equipo orienta opciones y alcances.</p></div>
+          <div class="step"><strong>5</strong><h3>Cotización</h3><p>Se prepara propuesta por WhatsApp/correo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Preguntas frecuentes</span>
+            <h2 id="faq-title">Dudas clave antes de escribir.</h2>
+          </div>
+          <p>Contenido editable para validar con Casas Fabelsa antes de convertir a plantilla Elementor.</p>
+        </div>
+        <details open><summary>¿Se mantienen las líneas Alpina, Toltén y ECO?</summary><p>Sí. Quedan dentro de la misma landing para no aumentar el alcance de cotización con páginas internas.</p></details>
+        <details><summary>¿El foco principal sigue siendo kit/prefabricado?</summary><p>No como mensaje principal. El foco pasa a proyectos personalizados y diseño en madera; los modelos estándar quedan como alternativas comerciales.</p></details>
+        <details><summary>¿Dónde se reemplazan las imágenes?</summary><p>Las imágenes SVG actuales sirven para revisar composición. En Elementor se reemplazan por fotografías reales del Drive 2026.</p></details>
+        <details><summary>¿Cuál es el canal principal?</summary><p>WhatsApp al +56 9 5184 7376. El correo queda como canal formal secundario.</p></details>
+      </div>
+    </section>
+
+    <section class="cta" id="cotizar">
+      <div class="container">
+        <span class="eyebrow">Cotiza aquí</span>
+        <h2>Conversemos tu próxima casa.</h2>
+        <p>Cuéntanos si buscas un proyecto personalizado, una Casa Alpina, Línea Toltén o Línea ECO. Te orientaremos según ubicación, terreno, estilo y presupuesto.</p>
+        <div class="actions">
+          <a class="btn btn-secondary" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20quiero%20cotizar.%20Me%20interesa%3A%20Proyecto%20personalizado%20/%20Alpina%20/%20Tolt%C3%A9n%20/%20ECO." target="_blank" rel="noopener">Escribir a WhatsApp <span class="arrow">→</span></a>
+          <a class="btn btn-light" href="mailto:constructorafabelsa@gmail.com?subject=Cotizaci%C3%B3n%20Casas%20Fabelsa">Correo formal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img src="assets/casas-fabelsa-logo.svg" alt="Casas Fabelsa" /><p>Prototipo one page con identidad visual, líneas vigentes y foco en proyectos personalizados.</p></div>
+      <div><strong>Contacto</strong><a href="https://wa.me/56951847376" target="_blank" rel="noopener">+56 9 5184 7376</a><a href="mailto:constructorafabelsa@gmail.com">constructorafabelsa@gmail.com</a></div>
+      <div><strong>Ubicación</strong><p>Camino Freire - Villarrica KM 3, Sector Los Castaños, Freire, Araucanía.</p></div>
+    </div>
+    <div class="container copyright">© 2026 Casas Fabelsa · Prototipo HTML para revisión antes de plantilla JSON Elementor.</div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/56951847376?text=Hola%20Casas%20Fabelsa,%20quiero%20cotizar%20mi%20proyecto." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">WhatsApp · Cotizar</a>
+</body>
+</html>

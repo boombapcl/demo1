@@ -1,0 +1,16 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Línea ECO Casas Fabelsa</title>
+  <desc id="desc">Ilustración de vivienda compacta y campestre para la línea ECO.</desc>
+  <rect width="900" height="1100" rx="44" fill="#EDF3E8"/>
+  <path d="M0 775C167 700 292 730 438 780C586 830 722 822 900 738V1100H0V775Z" fill="#C9DEC0"/>
+  <path d="M160 541H740V835H160V541Z" fill="#C9874D"/>
+  <path d="M249 392H650L798 541H97L249 392Z" fill="#2F5D3A"/>
+  <rect x="245" y="606" width="126" height="148" rx="10" fill="#FFF5E9"/>
+  <rect x="438" y="606" width="132" height="229" rx="10" fill="#70422A"/>
+  <rect x="616" y="606" width="72" height="104" rx="8" fill="#FFF5E9"/>
+  <path d="M118 873H782" stroke="#70422A" stroke-width="38" stroke-linecap="round" opacity=".35"/>
+  <path d="M705 315C750 256 818 255 848 310C802 331 753 340 705 315Z" fill="#2F5D3A"/>
+  <path d="M705 315C698 376 734 424 794 426C800 372 765 332 705 315Z" fill="#4C794D"/>
+  <text x="64" y="1000" fill="#2F5D3A" font-size="64" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Línea ECO</text>
+  <text x="66" y="1045" fill="#70422A" font-size="28" font-family="Arial, sans-serif">Opción práctica · acogedora · inversión eficiente</text>
+</svg>

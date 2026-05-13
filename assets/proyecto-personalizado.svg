@@ -1,0 +1,17 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Proyecto personalizado Casas Fabelsa</title>
+  <desc id="desc">Ilustración de casa en madera personalizada para reemplazar por fotografía propia.</desc>
+  <rect width="1200" height="820" rx="46" fill="#F7E9DC"/>
+  <circle cx="1030" cy="125" r="165" fill="#F5C18F" opacity=".72"/>
+  <path d="M0 646C178 560 297 603 431 640C561 677 683 684 805 630C940 570 1061 561 1200 622V820H0V646Z" fill="#D7E4D2"/>
+  <path d="M152 536H902V696H152V536Z" fill="#C68A55"/>
+  <path d="M236 386H833L988 536H95L236 386Z" fill="#2F5D3A"/>
+  <path d="M274 444H786L895 536H172L274 444Z" fill="#E7B071"/>
+  <rect x="247" y="552" width="145" height="144" rx="10" fill="#FFF4E8"/>
+  <rect x="444" y="552" width="145" height="144" rx="10" fill="#FFF4E8"/>
+  <rect x="641" y="552" width="180" height="144" rx="10" fill="#2B1D15"/>
+  <path d="M731 552V696" stroke="#F0BE83" stroke-width="8"/>
+  <path d="M206 727H934" stroke="#2B1D15" stroke-width="20" stroke-linecap="round" opacity=".18"/>
+  <text x="78" y="118" fill="#2F5D3A" font-size="56" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Proyectos personalizados</text>
+  <text x="82" y="166" fill="#70422A" font-size="27" font-family="Arial, sans-serif">Imagen propia por seleccionar desde Drive 2026</text>
+</svg>
